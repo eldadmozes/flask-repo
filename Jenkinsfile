@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build image') {
             steps {
-                sh 'docker build -t flask-frontend:${params.flask_version} .'
+                sh "docker build -t flask-frontend:${params.flask_version} ."
             }
         }   
         stage('Check Kubernetes') {
